@@ -70,16 +70,28 @@ print("------------ End of Function Initialization ---------------------\n\n")
 #TODO: Write a function that returns true if the input string is a palindrome string.
 # Inpute type: String
 # Return type: Boolean 
+'''
+Input: A string
+Output: Bool, true if string is palindrome
+
+A palindrome is a word that is the same backwards as it is forwards an example of this is racecar. 
+I need to take in the string, reverse that string, and than check if that reversed string is equal to the original string.
+O(n) Time and Space complexity I think
+'''
+def isPalindrome(x):
+    return x.lower() == x[::-1].lower()
+
+print(isPalindrome('Racecar'))
 
 
 '''
 Boolean values can represent the state of a program or a certain condition. For example, you can use variables such as game_active, can_edit, and polling_open, which take either a True or False value. When these values are True, certain code sections are enabled as the program runs.
 '''
 # sample input1: bob
-
+print(isPalindrome('bob'))
 # sample output1: true
 
 # sample input2: Jose
-
+print(isPalindrome('jose'))
 # sample output2: false
 
