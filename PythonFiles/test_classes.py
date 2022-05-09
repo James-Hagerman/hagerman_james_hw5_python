@@ -13,3 +13,20 @@ ar.print_self()
 
 #TODO: create several more instance of the Arithmetic class and add different values
 
+ar1 = Arithmetic(20,40)
+print(ar1.add())
+print(ar1.divide())
+print(ar1.remainder())
+ar1.print_self()
+
+ar2 = Arithmetic(100,100)
+print(ar2.add())
+print(ar2.divide())
+print(ar2.remainder())
+ar2.print_self()
+
+ar3 = Arithmetic(50,100)
+print(ar3.add())
+print(ar3.divide())
+print(ar3.remainder())
+ar3.print_self()
