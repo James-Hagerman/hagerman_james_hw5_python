@@ -33,9 +33,9 @@ In Python, a variable is a name attached to a piece of data. You first define a 
 '''
 
 # Initialize two string variables
-first_name = "John"
-last_name = "Doe"
-
+first_name = "James"
+last_name = "Hagerman"
+age = 22
 '''
 A string is a value made up of text and is one of the simplest data types in any language. Much of the information that’s passed within and between programs is strings.
 Strings are treated as a collection of characters, so the string "123" is different from the numerical value 123. A substring is part of a string.
@@ -63,7 +63,7 @@ print("Hi, my name is {} {}".format(first_name, last_name))
 # Then try concatenating it using the above four strategies.  
 
 
-print("-------------------------------------------------------------------------------\n")
+print("Hi, my name is %s %s %s\n" % (first_name, last_name, age))
 
 '''
 Integers and floats are the two main kinds of numerical data types. An integer, or int, is a number with no decimal part. A float is a number with a decimal part.
@@ -144,24 +144,36 @@ A nested loop is a loop inside another loop. Say you need a loop that examines e
 '''
 #TODO: write a for loop to ONLY print even numbers
 
-
+for num in range(1,101,2):
+    print(num)
 
 #TODO: Declare an Array with mixed data types. i.e. string, number, boolean, etc. 
 # Iterate through this list using for loop and see the output. 
 
-
+arr = ['string', 1, 1.1, True]
+for item in arr:
+  print(item)
 
 #TODO: Print the data type for each array item. 
 
-
+for item in arr:
+    print(type(item))
 
 # TODO: Reverse a String: input = hello, output = olleh
 
+def str_reverse(x):
+    return x[::-1]
 
+str_reverse('hello')
 
 # TODO: Reverse a number: input = 1234, output = 4321
+def str_to_num(x):
+    to_str = str(x)
+    rev_str = to_str[::-1]
+    to_num = int(rev_str)
+    return to_num
 
-
+str_to_num(1234)
 
 '''
 Sequences are important when you need to store items in a specific order. For example, a list of website users might be ordered according to when each user registered.
@@ -218,9 +230,12 @@ for index, fruit in enumerate(my_list):
     print("index: %s =  %s " % (index, fruit))
 
 #TODO: Using a for loop update every item in the my_list list into dessert items
-# dessert = ["apple cake", "banana cake", "donut", "fudge", "ice cream", "jilapi"]
+dessert = ["apple cake", "banana cake", "donut", "fudge", "ice cream", "jilapi"]
 
+for i, item in enumerate(my_list):
+    my_list[i] = dessert[i]
 
+my_list
 
 print("-------------------- Dictionary ---------------------------------\n")
 # initialize dictionary
@@ -260,3 +275,17 @@ for key, value in country_capital_dict.items():
 #TODO: Create 5 lists of real life items and create 5 dictionaries. For example, 
 # for list, I would create a list for list of chores I need to do on weekends. i.e chores = ['laundry', 'pick-up mail', 'clean the apt']
 # for dictionary, I would have friends to phone number. friends = {'jose': '718-233-6464', 'ali': '646-232-2323'}
+
+# Lists 
+friends = ['Charlie', 'Tim', 'Khalil', 'Catrina', 'Ryan']
+classes = ['PreAlgebra', 'History', 'Chemistry', 'Biology', 'Statistics']
+animals = ['Horse', 'Dog', 'Aligator', 'Emu', 'Flamingo', 'Ardvark']
+hobbies = ['Knitting', 'Painting', 'Bonsai', 'Reading', 'Video Games']
+stationary_items = ['Pencil', 'Paper', 'Pen', 'Eraser', 'Highlighter', 'Computer']
+
+# Dictionaries 
+friends_links = {'Charlie': ['Khalil','Catrina'], 'Tim': 'Catrina', 'Catrina': ['Tim', 'Charlie'], 'Khalil': 'Charlie'}
+friends_fav_class = {'Charlie': 'PreAlgebra', 'Tim': 'History', 'Khalil': 'History', 'Catrina': 'Biology', 'Ryan': 'Chemistry'}
+friends_hobbies = {'Charlie': 'Video games', 'Tim': 'Painting', 'Khalil': 'Reading', 'Catrina': 'Bonsai', 'Ryan': 'Painting'}
+classes_items = {'PreAlgebra': ['Pencil', 'Paper'], 'History': ['Pencil', 'Eraser'], 'Chemistry': 'Computer', 'Statistics': ['Pen', 'Pencil', 'Paper']}
+friends_fav_animal = {'Charlie': 'Dog', 'Tim': 'Aligator', 'Khalil': 'Ardvark', 'Catrina': 'Emu', 'Ryan': 'Flamingo'}
